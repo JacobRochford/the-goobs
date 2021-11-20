@@ -82,12 +82,16 @@ header nav {
     color: rgb(200, 200, 200);
     cursor: pointer;
 }
+
 #get-album-button:hover {
     background-color: rgb(188, 244, 248, .3);
     border-width: 1.5px;
 }
 
 #play-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: solid 2px rgb(12, 197, 243);
     background-color: transparent;
     border-radius: 50%;
