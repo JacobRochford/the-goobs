@@ -25,7 +25,7 @@ body {
     background-color: rgb(240, 240, 240);
 }
 
-/* Header */
+/* ----- Header ----- */
 
 nav ul {
     margin: 0;
@@ -115,7 +115,7 @@ header nav {
     margin: 0 auto;
 }
 
-/* Footer */
+/* ----- Footer ----- */
 
 footer {
     background-color: rgba(0, 0, 0, .6);
@@ -155,7 +155,7 @@ footer img {
     height: 30px;
 }
 
-/* About Page */
+/* ----- About Page ----- */
 
 .about-section {
     max-width: 900px;
@@ -173,6 +173,7 @@ footer img {
 
 .about-section p {
     line-height: 1.5em;
+    margin-bottom: 2em;
 }
 
 .about-section img {
@@ -183,7 +184,7 @@ footer img {
 }
 
 
-/* Home Page */
+/* ----- Home Page ----- */
 
 #tour-section {
     max-width: 900px;
@@ -223,7 +224,7 @@ footer img {
     color: #555;
 }
 
-.tour-row button {
+.buy-ticket-button {
     font-size: 1.1rem;
     color: #000;
     background-color: rgb(23, 200, 253);
@@ -231,47 +232,45 @@ footer img {
     border-radius: 25px;
     cursor: pointer;
     height: 3rem;
+    box-shadow: 1px 1px 5px;
 }
 
-.tour-row button:hover {
+.buy-ticket-button:hover {
     background-color: rgba(23, 200, 253, .5);
 }
 
-hr{
+.line {
     border: solid 1px rgb(200, 200, 200);
 }
 
 
-/* Store Page */
+/* ----- Store Page ----- */
 
-#shop-section {
+#shopSection {
     max-width: 900px;
     margin: 0 auto;
 }
 
-#shop-section img {
-    height: 250px;
-    width: 250px;
-}
-
-#shop-section h2 {
+#shopSection h2 {
+    font-family: 'Metal Mania';
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2rem;
     color: #111;
+    padding-top: 2rem;
 }
 
-.shop-menu {
+#albumMenu {
     display: grid;
-    grid-template-columns: repeat(2, 1fr)  ;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.shop-item {
+.album {
     text-align: center;
     margin-bottom: 2.5rem;
 }
 
-.shop-item h3 {
-    color: #666;
+.item-name {
+    color: #555;
     font-size: 1.2rem;
 }
 
@@ -280,13 +279,143 @@ hr{
     color: #000;
 }
 
-.shop-item button {
+.item-image {
+    height: 250px;
+    width: 250px;
+    box-shadow: 2px 2px 5px;
+}
+
+#merchMenu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.merch-item {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.addToCartButton {
     background-color: rgb(23, 200, 253);
     border-radius: 15px;
     cursor: pointer;
-    font-size: .9rem;
+    font-size: .8rem;
+    text-transform: uppercase;
     color: #333;
     padding: .3rem;
+    margin: .5rem;
+    box-shadow: 1px 1px 3px;
+}
+
+.addToCartButton:hover {
+    background-color: rgba(24, 247, 255, 0.7);
+}
+
+/* ----- CART ----- */
+
+.cart-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 2rem;
+    margin: 1rem auto;
+    max-width: 600px;
+}
+
+.cart-header span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+    text-align: center;
+}
+
+.cart-item {
+    display: grid;
+    place-items: center;
+    grid-template-columns: .75fr .75fr 1.25fr .75fr .75fr;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    margin: 1rem auto;
+    padding-bottom: 1rem;
+    font-size: .8rem;
+    max-width: 600px;
+}
+
+.cart-item-image {
+    display: block;
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    box-shadow: 2px 2px 5px;
+}
+
+.remove-item-button {
+    display: block;
+    margin: auto;
+    width: 80px;
+    height: 30px;
+    background-color: rgba(236, 83, 22, .9);
+    font-size: .7rem;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 10px;
+
+}
+
+.remove-item-button:hover {
+    cursor: pointer;
+    background-color: rgba(180, 89, 25, 0.8);
+}
+
+.cart-item-quantity {
+    display: block;
+    margin: auto;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+    width: 40px;
+    height: 30px;
+    border-radius: 5%;
+}
+
+.cart-item-price {
+    color: #000;
+    font-size: 1rem;
+}
+
+.cart-total {
+    text-align: center;
+    padding-left: 25%;
+    font-size: 1.2rem;
+}
+#cartContainer {
+    visibility: hidden;
+}
+
+#cartDiv {
+    display: block;
+    text-align: center;
+}
+
+#buttonDiv {
+    display: block;
+    text-align: center;
+}
+
+#purchaseButton {
+    background-color: rgb(23, 200, 253);
+    border-radius: 5%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(100, 99, 99, 0.918);
+    padding: .5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 1px 1px 5px;
+}
+
+#purchaseButton:hover {
+    background-color: rgb(4, 21, 24);
+    color: #fff;
 }
 
 @media screen and (max-width: 600px) {
@@ -298,7 +427,7 @@ hr{
         height: 270px;
     }
 
-    .shop-item img {
+    .item-image {
         max-width: 150px;
         max-height: 150px;
     }
@@ -313,7 +442,7 @@ hr{
         height: 300px;
     }
 
-    .shop-item img {
+    .item-image {
         max-width: 175px;
         max-height: 175px;
     }
@@ -329,7 +458,7 @@ hr{
         height: 350px;
     }
 
-    .shop-item img {
+    .item-image {
         max-width: 200px;
         max-height: 200px;
     }
@@ -352,8 +481,18 @@ hr{
         font-size: 18px;
     }
 
-    .shop-item img {
+    .item-image {
         min-width: 300px;
         min-height: 300px;
     }
+}
+
+/* ----- Toastr ----- */
+
+.toast-message {
+    color: #fff;
+}
+
+.toast-success {
+  background-color: rgba(50, 218, 248, 0.897);
 }
