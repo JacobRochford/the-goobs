@@ -494,5 +494,15 @@ footer img {
 }
 
 .toast-success {
-  background-color: rgba(50, 218, 248, 0.897);
+  background-color: rgba(23, 200, 255, 0.897);
 }
+
+#toast-container {
+  position: fixed;
+  z-index: 999999;
+  pointer-events: none;
+  /*overrides*/
+  top: 10%;
+}
+
+

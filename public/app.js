@@ -5,6 +5,7 @@
     app.tourData = [];
     app.albumData = [];
     app.merchData = [];
+    app.cartItems = [];
 
     app.homepage = async function () {
         await loadTourData();
@@ -16,6 +17,7 @@
         await loadMerchData();
         setAlbumData();
         setMerchData();
+        loadFromStorage();
         
         pageItems.addToCartButtons = document.getElementsByClassName('addToCartButton');
         for (let i = 0; i < pageItems.addToCartButtons.length; i++) {
@@ -34,7 +36,86 @@
             const input = pageItems.quantityInputs[i];
             input.addEventListener('change', quantityChanged);
         };
-    };
+
+        pageItems.purchaseButton = document.getElementById('purchaseButton');
+        pageItems.purchaseButton.addEventListener('click', purchaseItems);
+
+        
+    }
+
+    function loadFromStorage() {
+        const cacheData = localStorage.getItem('cartItems');
+
+        if (cacheData !== null) {
+            const items = JSON.parse(cacheData);
+            items.forEach((item) => {
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+                
+                const itemImage = document.createElement('img');
+                itemImage.classList.add('cart-item-image');
+                itemImage.src = item.itemImage;
+                cartItem.appendChild(itemImage);
+                
+                const h4 = document.createElement('h4');
+                h4.classList.add('cart-item-name');
+                h4.innerText = item.itemName;
+                cartItem.appendChild(h4);
+                
+                const itemPrice = document.createElement('span');
+                itemPrice.classList.add('cart-item-price');
+                itemPrice.innerText = item.itemPrice;
+                cartItem.appendChild(itemPrice);
+                
+                const quantity = document.createElement('input');
+                quantity.classList.add('cart-item-quantity');
+                quantity.setAttribute('type', 'number');
+                quantity.setAttribute('min', '1');
+                quantity.setAttribute('value', '1');
+                quantity.setAttribute('required', '');
+                quantity.value = item.itemQuantity;
+                quantity.addEventListener('change', quantityChanged);
+                cartItem.appendChild(quantity);
+                
+                const itemButton = document.createElement('button');
+                itemButton.classList.add('remove-item-button');
+                itemButton.innerText = 'Remove';
+                itemButton.addEventListener('click', removeFromCart);
+                
+                cartItem.appendChild(itemButton);
+                
+                cartDiv.appendChild(cartItem);
+                updateCartTotal();
+                document.getElementById('cartContainer').style.visibility = 'visible';
+            })
+        }
+    }
+
+    function saveToLocalStorage() {
+        const cartItems = document.querySelectorAll('.cart-item');
+        console.log(cartItems.length);
+        if (cartItems.length === 0) {
+            document.getElementById('cartContainer').style.visibility = 'hidden';
+        }
+        const items = Array.from(cartItems);
+        const itemsToSave = items.map((item) => {
+            return {
+                itemImage: item.firstElementChild.src,
+                itemName: item.firstElementChild.nextElementSibling.innerText,
+                itemPrice: item.lastElementChild.previousElementSibling.previousElementSibling.innerText,
+                itemQuantity: item.lastElementChild.previousElementSibling.value
+            }
+        });
+        localStorage.setItem('cartItems', JSON.stringify(itemsToSave));
+    }
+
+    function purchaseItems() {
+        const cartItems = document.querySelectorAll('.cart-item');
+        alert('Thank you for your purchase')
+        cartItems.forEach((el) => el.remove());
+        document.getElementById('cartContainer').style.visibility = 'hidden';
+        localStorage.clear();
+    }
 
     function addToCart(name, price, image) {
         const cartDiv = document.getElementById('cartDiv');
@@ -46,27 +127,26 @@
                 n.nextElementSibling.nextElementSibling.value++;
                 updateCartTotal();
                 return;
-            }
-        }
+            };
+        };
 
         const cartItem = document.createElement('div');
         cartItem.classList.add('cart-item');
         
-        const Cimage = document.createElement('img');
-        Cimage.classList.add('cart-item-image');
-        Cimage.src = image;
-        console.log(Cimage.src);
-        cartItem.appendChild(Cimage);
+        const itemImage = document.createElement('img');
+        itemImage.classList.add('cart-item-image');
+        itemImage.src = image;
+        cartItem.appendChild(itemImage);
 
         const h4 = document.createElement('h4');
         h4.classList.add('cart-item-name');
         h4.innerText = name;
         cartItem.appendChild(h4);
 
-        const Cprice = document.createElement('span');
-        Cprice.classList.add('cart-item-price');
-        Cprice.innerText = price;
-        cartItem.appendChild(Cprice);
+        const itemPrice = document.createElement('span');
+        itemPrice.classList.add('cart-item-price');
+        itemPrice.innerText = price;
+        cartItem.appendChild(itemPrice);
 
         const quantity = document.createElement('input');
         quantity.classList.add('cart-item-quantity');
@@ -77,12 +157,12 @@
         quantity.addEventListener('change', quantityChanged);
         cartItem.appendChild(quantity);
 
-        const Cbutton = document.createElement('button');
-        Cbutton.classList.add('remove-item-button');
-        Cbutton.innerText = 'Remove';
-        Cbutton.addEventListener('click', removeFromCart);
+        const itemButton = document.createElement('button');
+        itemButton.classList.add('remove-item-button');
+        itemButton.innerText = 'Remove';
+        itemButton.addEventListener('click', removeFromCart);
         
-        cartItem.appendChild(Cbutton);
+        cartItem.appendChild(itemButton);
 
         cartDiv.appendChild(cartItem);
         updateCartTotal();
@@ -99,6 +179,7 @@
         document.getElementById('cartContainer').style.visibility = 'visible';
 
         addToCart(name, price, image);
+        saveToLocalStorage();
     }
 
     function quantityChanged(e) {
@@ -107,12 +188,13 @@
             input.value = 1;
         }
         updateCartTotal();
+        saveToLocalStorage();
     }
 
     function removeFromCart(e) {
         e.target.parentElement.remove();
         updateCartTotal();
-
+        saveToLocalStorage();
     }
 
     function updateCartTotal() {
@@ -130,7 +212,7 @@
         }
         total = Math.round(total * 100) / 100;
         const cartTotal = document.getElementsByClassName('cart-total-price')[0];
-        cartTotal.innerText = `$${total}`;
+        cartTotal.innerText = `$${total.toFixed(2)}`;
     }
 
     function setMerchData() {
@@ -179,7 +261,7 @@
         if (cacheData !== null) {
             app.merchData = JSON.parse(cacheData);
         } else {
-            const rawData = await fetch('SiteData/merchData.json');
+            const rawData = await fetch('../SiteData/merchData.json');
             const data = await rawData.json();
             app.merchData = data;
             sessionStorage.setItem('merchdata', JSON.stringify(data));
@@ -199,13 +281,11 @@
             const title = document.createElement('h3');
             title.innerText = album.itemName;
             title.classList.add('item-name');
-
             albumDiv.appendChild(title);
 
             const image = document.createElement('img');
             image.src = album.itemImage;
             image.classList.add('item-image');
-
             albumDiv.appendChild(image);
 
             const div = document.createElement('div');
@@ -235,7 +315,7 @@
         if (cacheData !== null) {
             app.albumData = JSON.parse(cacheData);
         } else {
-            const rawData = await fetch('SiteData/albumdata.json');
+            const rawData = await fetch('../SiteData/albumdata.json');
             const data = await rawData.json();
             app.albumData = data;
             sessionStorage.setItem('albumdata', JSON.stringify(data))
@@ -293,7 +373,7 @@
         if (cacheData !== null) {
             app.tourData = JSON.parse(cacheData);
         } else {
-            const rawData = await fetch('SiteData/tourdata.json');
+            const rawData = await fetch('../SiteData/tourdata.json');
             const data = await rawData.json();
             app.tourData = data;
             sessionStorage.setItem('tourdata', JSON.stringify(data));
