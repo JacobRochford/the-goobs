@@ -12,6 +12,7 @@
 
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="site.css" />
+    
   </head>
   <body>
     <header class="hero">
@@ -24,7 +25,7 @@
       </nav>
       <h1>The Goobs</h1>
       <div class="container">
-        <button type="button" id="get-album-button">
+        <button onclick="location.href='store.html'" type="button" id="get-album-button">
           Get our Latest Album
         </button>
       </div>
@@ -37,42 +38,42 @@
           <span class="tour-date">DEC 16</span>
           <span class="tour-city">San Fransico, CA</span>
           <span class="tour-arena">Pelosi's House</span>
-          <button type="button">BUY TICKETS</button>
+          <button class="buy-ticket-button" type="button">BUY TICKETS</button>
         </div>
-        <hr />
+        <hr class="line"/>
         <div class="tour-row">
           <span class="tour-date">DEC 19</span>
           <span class="tour-city">SEATTLE, WA</span>
           <span class="tour-arena">CLIMATE PLEDGE ARENA</span>
-          <button type="button">BUY TICKETS</button>
+          <button class="buy-ticket-button" type="button">BUY TICKETS</button>
         </div>
         <hr />
         <div class="tour-row">
           <span class="tour-date">DEC 22</span>
           <span class="tour-city">PORTLAND, OR</span>
           <span class="tour-arena">MODA CENTER</span>
-          <button type="button">BUY TICKETS</button>
+          <button class="buy-ticket-button" type="button">BUY TICKETS</button>
         </div>
         <hr />
         <div class="tour-row">
           <span class="tour-date">JAN 2</span>
           <span class="tour-city">LAS VEGAS, NV</span>
           <span class="tour-arena">T-MOBILE ARENA</span>
-          <button type="button">BUY TICKETS</button>
+          <button class="buy-ticket-button" type="button">BUY TICKETS</button>
         </div>
         <hr />
         <div class="tour-row">
           <span class="tour-date">DEC 29</span>
           <span class="tour-city">DETROIT, MI</span>
           <span class="tour-arena">LITTLE CAESARS ARENA</span>
-          <button type="button">BUY TICKETS</button>
+          <button class="buy-ticket-button" type="button">BUY TICKETS</button>
         </div>
         <hr />
         <div class="tour-row">
           <span class="tour-date">JAN 7</span>
           <span class="tour-city">BALTIMORE, MD</span>
           <span class="tour-arena">ROYAL FARMS ARENA</span>
-          <button type="button">BUY TICKETS</button>
+          <button class="buy-ticket-button" type="button">BUY TICKETS</button>
         </div>
       </div>
     </main>
@@ -98,5 +99,7 @@
         </ul>
       </div>
     </footer>
+    <script src="./app.js"></script>
+    <script>app.homepage();</script>
   </body>
 </html>
