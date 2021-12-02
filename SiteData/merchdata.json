@@ -1,0 +1,22 @@
+[
+    {
+        "itemName": "Goob Sticker",
+        "itemImage": "Images/goobs-item3.jpg",
+        "itemPrice": "4.99"
+    },
+    {
+        "itemName": "Goobs Mug",
+        "itemImage": "Images/goobs-coffee.jpg",
+        "itemPrice": "9.99"
+    },
+    {
+        "itemName": "Goobs Mug",
+        "itemImage": "Images/goobs-coffee3.jpg",
+        "itemPrice": "10.99"
+    },
+    {
+        "itemName": "Goobs Mints",
+        "itemImage": "Images/goobs-item.jpg",
+        "itemPrice": "6.99"
+    }
+]
