@@ -1,0 +1,32 @@
+[
+    {
+        "date": "Jan 16",
+        "city": "San Diego, CA",
+        "arena": "Pechanga Arena"
+    },
+    {
+        "date": "Jan 19",
+        "city": "Los Angeles, CA",
+        "arena": "Staples Center"
+    },
+    {
+        "date": "Jan 22",
+        "city": "Portland, OR",
+        "arena": "Moda Center"
+    },
+    {
+        "date": "Feb 16",
+        "city": "Las Vegas, NV",
+        "arena": "T-Mobile Arena"
+    },
+    {
+        "date": "Feb 29",
+        "city": "Detroit, MI",
+        "arena": "Little Caesars Arena"
+    },
+    {
+        "date": "Mar 17",
+        "city": "Baltimore, MD",
+        "arena": "Royal Farms Arena"
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "itemName": "Goobies",
+        "itemImage": "Images/Goob-Album4.JPG",
+        "itemPrice": "1499"
+    },
+    {
+        "id": 2,
+        "itemName": "Gibbs",
+        "itemImage": "Images/Goob-N.jpg",
+        "itemPrice": "1399"
+    },
+    {
+        "id": 3,
+        "itemName": "Goopie",
+        "itemImage": "Images/Goob-J.JPG",
+        "itemPrice": "1199"
+    },
+    {
+        "id": 4,
+        "itemName": "Goobs Vol. 1",
+        "itemImage": "Images/Goobs-Album.jpg",
+        "itemPrice": "1699"
+    },
+    {
+        "id": 5,
+        "itemName": "Goobsters",
+        "itemImage": "Images/Goobs-Album3.png",
+        "itemPrice": "1499"
+    },
+    {
+        "id": 6,
+        "itemName": "Goobs Vol. 2",
+        "itemImage": "Images/Goobs-Album2.jpg",
+        "itemPrice": "1799"
+    }
+]

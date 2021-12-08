@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Goobs | Store</title>
+    <link rel="icon" href="./favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
+    />
+    <link rel="stylesheet" href="./site.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav>
+        <ul>
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="./store.html">STORE</a></li>
+          <li><a href="./about.html">ABOUT</a></li>
+        </ul>
+      </nav>
+      <h1>The Goobs</h1>
+    </header>
+    <main id="shopSection">
+      <h2>MUSIC</h2>
+      <div id="albumMenu">
+        <div class="album">
+          <h3 class="item-name">Album 1</h3>
+          <img class="item-image" src="./Images/Goob-Album4.JPG" />
+          <div>
+            <span class="item-price">$14.99</span>
+            <button class="addToCartButton" type="button">ADD TO CART</button>
+          </div>
+        </div>
+        <div class="album">
+          <h3 class="item-name">Album 2</h3>
+          <img class="item-image" src="./Images/Goob-N.jpg" />
+          <div>
+            <span class="item-price">$14.99</span>
+            <button class="addToCartButton" type="button">ADD TO CART</button>
+          </div>
+        </div>
+        <div class="album">
+          <h3 class="item-name">Album 3</h3>
+          <img class="item-image" src="./Images/Goob-J.JPG" />
+          <div>
+            <span class="item-price">$9.99</span>
+            <button class="addToCartButton" type="button">ADD TO CART</button>
+          </div>
+        </div>
+        <div class="album">
+          <h3 class="item-name">Album 4</h3>
+          <img class="item-image" src="./Images/Goobs-Album.jpg" />
+          <div>
+            <span class="item-price">$19.99</span>
+            <button class="addToCartButton" type="button">ADD TO CART</button>
+          </div>
+        </div>
+        <div class="album">
+          <h3 class="item-name">Album 5</h3>
+          <img class="item-image" src="./Images/Goobs-Album3.png" />
+          <div>
+            <span class="item-price">$19.99</span>
+            <button class="addToCartButton" type="button">ADD TO CART</button>
+          </div>
+        </div>
+        <div class="album">
+          <h3 class="item-name">Album 6</h3>
+          <img class="item-image" src="./Images/Goobs-Album2.jpg" />
+          <div>
+            <span class="item-price">$19.99</span>
+            <button class="addToCartButton" type="button">ADD TO CART</button>
+          </div>
+        </div>
+      </div>
+      <h2>MERCH</h2>
+      <div id="merchMenu">
+        <div class="merch-item">
+          <h3 class="item-name">Goob Sticker</h3>
+          <img class="item-image" src="./Images/goobs-item3.jpg" />
+          <div>
+            <span class="item-price">$19.99</span>
+            <button class="addToCartButton" type="button">ADD TO CART</button>
+          </div>
+        </div>
+        <div class="merch-item">
+          <h3 class="item-name">Coffee Mug</h3>
+          <img class="item-image" src="./Images/goobs-coffee.jpg" />
+          <div>
+            <span class="item-price">$6.99</span>
+            <button class="addToCartButton" type="button">ADD TO CART</button>
+          </div>
+        </div>
+        <div class="merch-item">
+          <h3 class="item-name">Coffee Mug</h3>
+          <img class="item-image" src="./Images/goobs-coffee3.jpg" />
+          <div>
+            <span class="item-price">$6.99</span>
+            <button class="addToCartButton" type="button">ADD TO CART</button>
+          </div>
+        </div>
+        <div class="merch-item">
+          <h3 class="item-name">Mints</h3>
+          <img class="item-image" src="./Images/goobs-item.jpg" />
+          <div>
+            <span class="item-price">$6.99</span>
+            <button class="addToCartButton" type="button">ADD TO CART</button>
+          </div>
+        </div>
+      </div>
+      <h2>CART</h2>
+      <div class="cart-header">
+        <span>ITEM</span>
+        <span>PRICE</span>
+        <span>QUANTITY</span>
+      </div>
+      <div id="cartDiv">
+        <!-- <div class="cart-item">
+          <img class="cart-item-image" src="Images/goobs-item3.jpg" alt="">
+          <h4 class="cart-item-name">T-Shirt</h4>
+          <span class="cart-item-price">$6.99</span>
+          <input type="number" class="cart-item-quantity" value="1" min="1" required>
+          <button class="remove-item-button" type="button">Remove</button>
+        </div>
+        <div class="cart-item">
+          <img class="cart-item-image" src="Images/Goob-Album4.JPG" alt="">
+          <h4 class="cart-item-name">Goobies Album</h4>
+          <span class="cart-item-price">$14.99</span>
+          <input type="number" class="cart-item-quantity" value="1" min="1" required>
+          <button class="remove-item-button" type="button">Remove</button>
+        </div> -->
+      </div>
+      <div id="cartContainer">
+        <div id="buttonDiv">
+          <div class="cart-total">
+            <strong class="cart-total">Total</strong>
+            <span class="cart-total-price">$0</span>
+          </div>
+          <button id="purchaseButton" type="button">PURCHASE</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <h3>The Goobs</h3>
+        <ul>
+          <li>
+            <a href="https://www.youtube.com" target="_blank">
+              <img src="./Images/YouTube Logo.png" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.spotify.com" target="_blank">
+              <img src="./Images/Spotify Logo.png" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="./Images/Facebook Logo.png" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script>app.storepage();</script>
+  </body>
+</html>

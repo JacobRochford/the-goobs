@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Goobs</title>
+    <meta property="og:title" content="The Goobs homepage" />
+    <meta
+      name="description"
+      content="The Goobs music band's front page including upcoming tours."
+    />
+
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./site.css" />
+    
+  </head>
+  <body>
+    <header class="hero">
+      <nav>
+        <ul>
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="./store.html">STORE</a></li>
+          <li><a href="./about.html">ABOUT</a></li>
+        </ul>
+      </nav>
+      <h1>The Goobs</h1>
+      <div class="container">
+        <button onclick="location.href='./store.html'" type="button" id="get-album-button">
+          Get our Latest Album
+        </button>
+      </div>
+      <button type="button" id="play-button">&#9658;</button>
+    </header>
+    <main id="tour-section">
+      <h2>TOURS</h2>
+      <div id="tours">
+        <div class="tour-row">
+          <span class="tour-date">DEC 16</span>
+          <span class="tour-city">San Fransico, CA</span>
+          <span class="tour-arena">Pelosi's House</span>
+          <button class="buy-ticket-button" type="button">BUY TICKETS</button>
+        </div>
+        <hr class="line"/>
+        <div class="tour-row">
+          <span class="tour-date">DEC 19</span>
+          <span class="tour-city">SEATTLE, WA</span>
+          <span class="tour-arena">CLIMATE PLEDGE ARENA</span>
+          <button class="buy-ticket-button" type="button">BUY TICKETS</button>
+        </div>
+        <hr />
+        <div class="tour-row">
+          <span class="tour-date">DEC 22</span>
+          <span class="tour-city">PORTLAND, OR</span>
+          <span class="tour-arena">MODA CENTER</span>
+          <button class="buy-ticket-button" type="button">BUY TICKETS</button>
+        </div>
+        <hr />
+        <div class="tour-row">
+          <span class="tour-date">JAN 2</span>
+          <span class="tour-city">LAS VEGAS, NV</span>
+          <span class="tour-arena">T-MOBILE ARENA</span>
+          <button class="buy-ticket-button" type="button">BUY TICKETS</button>
+        </div>
+        <hr />
+        <div class="tour-row">
+          <span class="tour-date">DEC 29</span>
+          <span class="tour-city">DETROIT, MI</span>
+          <span class="tour-arena">LITTLE CAESARS ARENA</span>
+          <button class="buy-ticket-button" type="button">BUY TICKETS</button>
+        </div>
+        <hr />
+        <div class="tour-row">
+          <span class="tour-date">JAN 7</span>
+          <span class="tour-city">BALTIMORE, MD</span>
+          <span class="tour-arena">ROYAL FARMS ARENA</span>
+          <button class="buy-ticket-button" type="button">BUY TICKETS</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <h3>The Goobs</h3>
+        <ul>
+          <li>
+            <a href="https://www.youtube.com" target="_blank">
+              <img src="./Images/YouTube Logo.png" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.spotify.com" target="_blank">
+              <img src="./Images/Spotify Logo.png" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="./Images/Facebook Logo.png" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="./js/app.js"></script>
+    <script>app.homepage();</script>
+  </body>
+</html>
