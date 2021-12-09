@@ -12,7 +12,7 @@
   - Async/Await
   - Media Queries
   
-  ### Web Tools
+  ### Tools
   - NPM
   - Prettier
   
