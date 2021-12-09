@@ -6,7 +6,7 @@
   - Use of vanilla JavaScript, HTML, CSS
   - Responsive layout
   - Mobile capability
-  - Dynamic content by fetching data from json files  
+  - Dynamic content 
   - Shopping cart with functionality
   - Local Storage / Session Storage
   - Async/Await
