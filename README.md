@@ -23,4 +23,4 @@
 
 ## Demo
 
-<img src="https://github.com/JacobRochford/the-goobs/blob/main/images/The%20Goobs%20%E2%80%94%20Firefox%20Developer%20Edition%202021-12-08%2009-49-05.gif" width="900" height="600" />
+<img src="https://github.com/JacobRochford/the-goobs/blob/main/Images/The%20Goobs%20%E2%80%94%20Firefox%20Developer%20Edition%202021-12-08%2009-49-05.gif" width="900" height="600" />
