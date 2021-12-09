@@ -252,7 +252,7 @@
     if (cacheData !== null) {
       app.merchData = JSON.parse(cacheData);
     } else {
-      const rawData = await fetch('merchdata.json');
+      const rawData = await fetch('../assets/merchdata.json');
       const data = await rawData.json();
       app.merchData = data;
       sessionStorage.setItem('merchdata', JSON.stringify(data));
@@ -307,7 +307,7 @@
     if (cacheData !== null) {
       app.albumData = JSON.parse(cacheData);
     } else {
-      const rawData = await fetch('albumdata.json');
+      const rawData = await fetch('../assets/albumdata.json');
 
       const data = await rawData.json();
       app.albumData = data;
@@ -366,7 +366,7 @@
     if (cacheData !== null) {
       app.tourData = JSON.parse(cacheData);
     } else {
-      const rawData = await fetch('tourdata.json');
+      const rawData = await fetch('../assets/tourdata.json');
       const data = await rawData.json();
       app.tourData = data;
       sessionStorage.setItem('tourdata', JSON.stringify(data));

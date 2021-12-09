@@ -3,8 +3,8 @@
 
 @font-face {
     font-family: "Booter - Zero Zero";
-    src: url("Fonts/Booter - Zero Zero.woff") format("woff"),
-         url("Fonts/Booter - Zero Zero.woff2") format("woff2");
+    src: url("../Fonts/Booter - Zero Zero.woff") format("woff"),
+         url("../Fonts/Booter - Zero Zero.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
@@ -12,7 +12,6 @@
 * {
     font-family: Raleway, sans-serif, 'Times New Roman';
     color: #777;
-    /* box-sizing: border-box ; */
 }
 
 html {
@@ -55,7 +54,7 @@ header nav {
 
 .hero {
     background-color: rgba(0, 0, 0, .6);
-    background-image: url("Images/Hero.jpg");
+    background-image: url("../Images/Hero.jpg");
     background-blend-mode: multiply;
     background-size: cover;
     padding-bottom: 125px;
@@ -119,7 +118,7 @@ header nav {
 
 footer {
     background-color: rgba(0, 0, 0, .6);
-    background-image: url("Images/Hero.jpg");
+    background-image: url("../Images/Hero.jpg");
     background-blend-mode: multiply;
     background-size: cover;
 }
@@ -429,18 +428,6 @@ h1{
     color: #000;
     margin-top: 20px;
 }
-/* 
-.thank-you {
-    max-width: 900px;
-    margin: 0 auto;
-    padding-top: 3rem;
-}
-
-.thankyou-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-} */
 
 .hero-thankyou {
     height: 7rem;
