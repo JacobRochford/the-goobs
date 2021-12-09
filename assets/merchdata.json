@@ -2,25 +2,25 @@
     {
         "id": 7,
         "itemName": "Goob Sticker",
-        "itemImage": "Images/goobs-item3.jpg",
+        "itemImage": "images/goobs-item3.jpg",
         "itemPrice": "499"
     },
     {
         "id": 8,
         "itemName": "Goobs Mug 10oz",
-        "itemImage": "Images/goobs-coffee.jpg",
+        "itemImage": "images/goobs-coffee.jpg",
         "itemPrice": "999"
     },
     {
         "id": 9,
         "itemName": "Goobs Mug 12oz",
-        "itemImage": "Images/goobs-coffee3.jpg",
+        "itemImage": "images/goobs-coffee3.jpg",
         "itemPrice": "1099"
     },
     {
         "id": 10,
         "itemName": "Goobs Mints",
-        "itemImage": "Images/goobs-item.jpg",
+        "itemImage": "images/goobs-item.jpg",
         "itemPrice": "699"
     }
 ]
