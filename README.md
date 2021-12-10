@@ -18,7 +18,7 @@
   
   ### Libraries
   - jQuery
-  - Toastr
+  - Toastr 
 
 
 ## Demo
