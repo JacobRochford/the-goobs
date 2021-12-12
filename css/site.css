@@ -208,17 +208,22 @@ footer img {
 }
 
 .tour-date {
+    display: grid;
+    place-items: center;
     font-size: 1.2rem;
     font-weight: bold;
 }
 
 .tour-city {
     display: grid;
+    place-items: center;
     font-size: 1.2rem;
     color: #000;
 }
 
 .tour-arena {
+    display: grid;
+    place-items: center;
     font-size: 1.2rem;
     color: #555;
 }
