@@ -4,16 +4,14 @@
   Website for a band I made up. The band is just a couple of goobs (brother and his friend), who love rocking out to metal music.
   ### Features
   - Use of vanilla JavaScript, HTML, CSS
-  - Responsive layout
-  - Mobile capability
-  - Dynamic content 
+  - Responsive website
+  - Dynamic page items 
   - Shopping cart with functionality
   - Local Storage / Session Storage
   - Async/Await
   - Media Queries
   
   ### Tools
-  - NPM
   - Prettier
   
   ### Libraries
